@@ -47,4 +47,8 @@ public class MovieService implements ICurdService<Movie, Long>{
         return movieRepository.findAll(pageable);
     }
 
+    public List<Movie> findAllByDirector_Name(String name) {
+        return movieRepository.findAllByDirector_Name(name);
+    }
+
 }

@@ -41,5 +41,10 @@ public class MovieController {
         return ResponseEntity.ok().body(movieService.update(id, movie));
     }
 
+    @GetMapping("/director/{name}")
+    public ResponseEntity<List<Movie>> getAllByDirectorName(@PathVariable String name) {
+        return ResponseEntity.ok().body(movieService.findAllByDirector_Name(name));
+    }
+
 }
 
